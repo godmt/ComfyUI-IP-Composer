@@ -7,10 +7,12 @@ import open_clip
 import folder_paths
 from pathlib import Path
 
-
+MODEL_DIR_NAME = "ip_concept_matrices"
 models_dir = Path(__file__).parent.parent.parent / "models"
-root_path = str(models_dir.resolve() / "ip_concept_matrices")
-folder_paths.folder_names_and_paths["ip_concept_matrices"] = ([root_path], [".safetensors"])
+root_path = models_dir.resolve() / MODEL_DIR_NAME
+if not root_path.exists():
+    root_path.mkdir(parents=True, exist_ok=True)
+folder_paths.folder_names_and_paths[MODEL_DIR_NAME] = ([str(root_path)], [".safetensors"])
 
 
 CLIP_VISIONS = {
@@ -115,7 +117,7 @@ class IPSaveConceptMatrix:
 class IPLoadConceptMatrix:
     @classmethod
     def INPUT_TYPES(cls):
-        matrix_names = folder_paths.get_filename_list("ip_concept_matrices")
+        matrix_names = folder_paths.get_filename_list(MODEL_DIR_NAME)
         return {"required": {
             "matrix_name": (matrix_names,),
         }}
@@ -126,7 +128,7 @@ class IPLoadConceptMatrix:
     FUNCTION = "execute"
 
     def execute(self, matrix_name):
-        file_path = folder_paths.get_full_path("ip_concept_matrices", matrix_name)
+        file_path = folder_paths.get_full_path(MODEL_DIR_NAME, matrix_name)
         data = st.load_file(file_path)
         P = data["concept_matrix"]
         return (P,)
