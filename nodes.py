@@ -125,7 +125,7 @@ class IPLoadConceptMatrix:
     TITLE = "IP-Comp Load Concept Matrix"
     FUNCTION = "execute"
 
-    def execute(self, matrix_name, device):
+    def execute(self, matrix_name):
         file_path = folder_paths.get_full_path("ip_concept_matrices", matrix_name)
         data = st.load_file(file_path)
         P = data["concept_matrix"]
