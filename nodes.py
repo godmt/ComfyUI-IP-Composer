@@ -109,7 +109,7 @@ class IPSaveConceptMatrix:
 
     def execute(self, open_clip_model, concept_matrix, concept_name):
         meta = {"clip_vision_model": open_clip_model["hf_name"]}
-        file_path = root_path + "\\" + f"{concept_name}.safetensors"
+        file_path = str(root_path / f"{concept_name}.safetensors")
         st.save_file({"concept_matrix": concept_matrix.cpu()}, file_path, metadata=meta)
         return ()
 
