@@ -120,7 +120,7 @@ class IPLoadConceptMatrix:
             "matrix_name": (matrix_names,),
         }}
     RETURN_TYPES = ("TENSOR",)
-    RETURN_NAMES = ("concept_matrix")
+    RETURN_NAMES = ("concept_matrix",)
     CATEGORY = "ip_composer"
     TITLE = "IP-Comp Load Concept Matrix"
     FUNCTION = "execute"
