@@ -1,2 +1,2 @@
 # ComfyUI-IP-Composer
-![image](https://github.com/user-attachments/assets/93d0f178-2069-46b4-936d-64399bc28ee0)
+![image](https://github.com/user-attachments/assets/21752669-f940-42a4-a498-b0909f6739e2)
