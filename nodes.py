@@ -53,7 +53,7 @@ class IPConceptMatrix:
         return {"required": {
             "open_clip_model": ("OPEN_CLIP",),
             "descriptions": ("STRING", {"multiline": True}),
-            "rank": ("INT", {"default": 16, "min": 1, "max": 64}),
+            "rank": ("INT", {"default": 30, "min": 1, "max": 1024}),
             "batch_size": ("INT", {"default": 100, "min": 1, "max": 512})
         }}
     RETURN_TYPES = ("TENSOR",)
