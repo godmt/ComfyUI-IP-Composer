@@ -3,7 +3,7 @@ name = "comfyui-ip-composer"
 description = "ComfyUI wrapper of IP-Composer"
 version = "0.1.0"
 license = { text = "MIT License" }
-dependencies = ["open_clip"]
+dependencies = ["open-clip-torch"]
 
 [project.urls]
 Repository = "https://github.com/godmt/ComfyUI-IP-Composer"

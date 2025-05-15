@@ -1,1 +1,1 @@
-open_clip
+open-clip-torch
