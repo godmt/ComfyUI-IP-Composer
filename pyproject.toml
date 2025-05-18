@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-ip-composer"
 description = "ComfyUI wrapper of IP-Composer"
-version = "0.1.1"
+version = "1.0.0"
 license = { text = "MIT License" }
 dependencies = ["open-clip-torch"]
 
